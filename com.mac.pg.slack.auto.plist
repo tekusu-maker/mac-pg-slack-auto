@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+  <dict>
+    <!-- LaunchAgentの識別子 -->
+    <key>Label</key>
+    <string>com.mac.pg.slack.auto</string>
+
+    <!-- 実行するコマンドと引数 -->
+    <key>ProgramArguments</key>
+    <array>
+      <string>/<YOUR_DIRECTORY_PATH>>/run_script.sh</string>
+    </array>
+
+    <!-- 1時間（3600秒ごと）に実行 -->
+    <key>StartInterval</key>
+    <integer>3600</integer>
+
+    <!-- ログイン時にすぐ実行 -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <!-- 標準出力・エラー出力のログ出力先（任意） -->
+    <key>StandardOutPath</key>
+    <string>/<YOUR_DIRECTORY_PATH>>/logs/launch_stdout.log</string>
+    <key>StandardErrorPath</key>
+    <string>/<YOUR_DIRECTORY_PATH>>/logs/launch_stderr.log</string>
+  </dict>
+</plist>
